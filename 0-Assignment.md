@@ -35,8 +35,13 @@ Please provide answers to these questions using markdown notation and place them
 
 
 3. Please provide a link to the repository you are using for this class.
-https://github.com/bxnkuoch/cs283
+    
+    - https://github.com/bxnkuoch/cs283
 
 4. Briefly describe what you want to get out of this class.
 
+    - I just want to get a better understanding of how computers work overall. I'm more interested in how they work on a software and system level rather than a hardware level.
+
 5. Briefly describe any concerns you might be having with being successful in this class (if any).
+
+    - Some concerns I have for this class is that it might be confusing because I don't know too much about systems and it seems like you can get lost pretty easily. Not only that but I feel like I might also not like the content of the class or find it not too interesting however it is too soon to know that. I also recently switched to MacOS and I still need to get familiar with it however I also feel like this is a good class to get familiar with how to use the macOS.
