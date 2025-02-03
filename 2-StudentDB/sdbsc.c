@@ -177,9 +177,15 @@ int del_student(int fd, int id)
         return ERR_DB_OP;
     }
 
-    // Mark the record as deleted
+    if (student.id == DELETED_STUDENT_ID) {
+        return ERR_DB_OP;
+    }
+
     student.id = DELETED_STUDENT_ID;
+    memset(&student, 0, sizeof(student_t));
+
     off_t offset = (id - MIN_STD_ID) * STUDENT_RECORD_SIZE;
+    
     if (lseek(fd, offset, SEEK_SET) == -1) {
         printf(M_ERR_DB_WRITE);
         return ERR_DB_FILE;
@@ -193,6 +199,7 @@ int del_student(int fd, int id)
     printf(M_STD_DEL_MSG, id);
     return NO_ERROR;
 }
+
 
 /*
  *  count_db_records
@@ -399,27 +406,10 @@ void print_student(student_t *s)
  */
 int compress_db(int fd)
 {
-    int tmp_fd = open(TMP_DB_FILE, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-    if (tmp_fd == -1) {
-        printf(M_ERR_DB_CREATE);
-        return ERR_DB_FILE;
-    }
 
-    student_t student = {0};
-    while (read(fd, &student, STUDENT_RECORD_SIZE) == STUDENT_RECORD_SIZE) {
-        if (memcmp(&student, &EMPTY_STUDENT_RECORD, STUDENT_RECORD_SIZE) != 0) {
-            write(tmp_fd, &student, STUDENT_RECORD_SIZE);
-        }
-    }
-
-    close(fd);
-    if (rename(TMP_DB_FILE, DB_FILE) == -1) {
-        printf(M_ERR_DB_CREATE);
-        return ERR_DB_FILE;
-    }
-
-    printf(M_DB_COMPRESSED_OK);
-    return open_db(DB_FILE, false);
+    // TODO
+    printf(M_NOT_IMPL);
+    return fd;
 }
 
 /*
