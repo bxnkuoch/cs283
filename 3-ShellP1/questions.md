@@ -15,7 +15,7 @@
 - One topic you should have found information on is "redirection". Please provide at least 3 redirection examples that we should implement in our custom shell, and explain what challenges we might have implementing them.
 
     > **Answer**:  
-- Redirecting Standard Output to a File: The challenge could be ensuring existing content is overwritten, and handling potential errors like permission issues or disk space limitations.
+    - Redirecting Standard Output to a File: The challenge could be ensuring existing content is overwritten, and handling potential errors like permission issues or disk space limitations.
       - Redirecting Standard Error to a File: The challenge would be and managing scenarios where the error file cannot be created or written to.
       - Redirecting Both Standard Output and Standard Error to the Same File: The challegne would be implementing the correct order of redirection to ensure both output streams are combined into a single file.
 
