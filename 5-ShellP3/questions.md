@@ -8,7 +8,7 @@ _The unused pipe ends must be closed to prevent file descriptor leakage. If they
 
 3. Your shell recognizes built-in commands (cd, exit, dragon). Unlike external commands, built-in commands do not require execvp(). Why is cd implemented as a built-in rather than an external command? What challenges would arise if cd were implemented as an external process?
 
-This is because cd directly modifies the shell's working directory. If cd were external, the child process would change the directory only within its own environment, and the parent shell would remain unaffected._
+_This is because cd directly modifies the shell's working directory. If cd were external, the child process would change the directory only within its own environment, and the parent shell would remain unaffected._
 
 4. Currently, your shell supports a fixed number of piped commands (CMD_MAX). How would you modify your implementation to allow an arbitrary number of piped commands while still handling memory allocation efficiently? What trade-offs would you need to consider?
 
