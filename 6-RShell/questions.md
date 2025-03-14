@@ -12,8 +12,8 @@ _Stateful protocols retain information across multiple requests, allowing them t
 
 4. Our lecture this week stated that UDP is "unreliable". If that is the case, why would we ever use it?
 
-_Despite being unreliable, UDP is preferred in situations where low latency and speed are critical, such as real-time communications or time-sensitive data transmission, where the speed of delivery is more important than ensuring all packets are received._
+_Even though it is "unreliable", We use it when we need low latency and speed, such as real-time communications or time-sensitive data transmission, where the speed of delivery is more important than ensuring all packets are received._
 
 5. What interface/abstraction is provided by the operating system to enable applications to use network communications?
 
-_The operating system provides socket interfaces, which allow applications to perform network communications using various protocols, enabling efficient data exchange over a network._
+_The operating system provides socket interfaces, which allow applications to perform network communications using various protocols. This allows for efficient data exchange over a network._
